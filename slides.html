@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ej de presentación | Usando HTML5 y Pandoc</title>
+
+        <meta name="description" content="Descripcion de la presentación. Esto es usado para completar la metadata en html." />
+    
+        <meta name="author" content="Franco N. Bellomo" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Bootstrap latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="reveal_js/css/reveal.css">
+    <!-- Theme -->
+        <link rel="stylesheet" href="reveal_js/css/theme/black.css" id="theme">
+    
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal_js/lib/css/zenburn.css">
+    <!-- Personal CSS -->
+    <!--
+    <link rel="stylesheet" href="reveal_js/css/personal.css" id="theme">
+    -->
+
+    <!--[if lt IE 9]>
+	<script src="reveal_js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+      </head>
+
+  <body>
+    
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+	<section>
+	  <div class="container-fluid">
+	  <h1>Ej de presentación</h1>
+	  <h2>Usando HTML5 y Pandoc</h2>
+	  <h3>Franco N. Bellomo</h3>
+	  <p>
+	    <h4>2 abril - 2016</h4>
+	  </p>
+
+	  <h4 style="padding-top: 20%;">Workshop en Técnicas de Programación Científica 2016 (WTPC16) - UBA</h4>
+	  </div>
+	</section>  
+
+		<section>
+	  <h2 id="toctitle"> Table of Contents </h2>
+	  <nav id="TOC">
+	    <ul>
+<li><a href="#hola-mundo">Hola Mundo!</a></li>
+<li><a href="#diapositivas-verticales">Diapositivas verticales</a><ul>
+<li><a href="#primera-sub-diapositiva-vertical">Primera sub diapositiva vertical</a></li>
+<li><a href="#segunda-sub-diapositiva-vertical">Segunda sub diapositiva vertical</a></li>
+</ul></li>
+<li><a href="#cambiando-el-fondo">Cambiando el fondo</a><ul>
+<li><a href="#color-sólido">Color sólido</a></li>
+<li><a href="#imagen">Imagen</a></li>
+</ul></li>
+</ul>
+	  </nav>
+	</section>
+		
+	<section id="hola-mundo" class="level2">
+<h2>Hola Mundo!</h2>
+<p>Presentación escrita enteramente en markdown. Luego el formato se lo damos usando usando pandoc y reveal.js</p>
+</section>
+<section id="diapositivas-verticales" class="level2">
+<h2>Diapositivas verticales</h2>
+<section id="primera-sub-diapositiva-vertical" class="level3">
+<h3>Primera sub diapositiva vertical</h3>
+<p>Podemos hacer un presentación en 2D usando diapositivas verticales, delimitar los distintos temas de la presentación. Simplemente ponemos un titulo <em>h3</em> y listo!</p>
+<pre><code>## Diapositivas verticales 
+
+### Primera sub diapositiva vertical
+Primer texto
+
+### Segunda sub diapositiva vertical
+Mas texto</code></pre>
+</section>
+<section id="segunda-sub-diapositiva-vertical" class="level3">
+<h3>Segunda sub diapositiva vertical</h3>
+<p>Y acá colocamos más texto relacionado con el mismo tema</p>
+<ul>
+<li>point a</li>
+<li>point b</li>
+<li>point c</li>
+</ul>
+</section>
+</section>
+<section id="cambiando-el-fondo" class="level2" data-background="#fff">
+<h2>Cambiando el fondo</h2>
+<section id="color-sólido" class="level3" data-background="fff">
+<h3>Color sólido</h3>
+<p>Podemos jugar con el fondo de la diapositiva. Si queremos poner un color solido</p>
+<pre><code>## Titulo {data-background=&quot;código hexadecimal&quot;}</code></pre>
+</section>
+<section id="imagen" class="level3" data-background="img/1429588685483.jpg">
+<h3>Imagen</h3>
+<p>Y si ahora queremos poner una imagen</p>
+<pre><code>## Nuevo Titulo {data-background=&quot;dirección de la imagen&quot;}</code></pre>
+</section>
+</section>
+      </div>
+    </div>
+
+    <script src="reveal_js/lib/js/head.min.js"></script>
+    <script src="reveal_js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls:  true ,
+      progress:  true ,
+      history:   true ,
+
+      center: true,
+
+      // none/fade/slide/convex/concave/zoom
+      transition:  'slide' , 
+      
+      // Optional reveal.js plugins
+      dependencies: [
+      { src: 'reveal_js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal_js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal_js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal_js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal_js/plugin/zoom-js/zoom.js', async: true },
+      { src: 'reveal_js/plugin/notes/notes.js', async: true }
+      ]
+      });
+    </script>
+
+  </body>
+</html>
